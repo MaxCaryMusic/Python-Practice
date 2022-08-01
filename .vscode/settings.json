@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "pw_mgr"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

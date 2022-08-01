@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 # Structure of project needs to be fixed to make this nicer
 sys.path.append('.')
 from password_manager import write_key
