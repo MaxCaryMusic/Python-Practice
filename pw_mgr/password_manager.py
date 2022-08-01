@@ -26,6 +26,8 @@ def main():
     print("Welcome to Max's Password Manager!")
     print("\n")
     pepper = "P3pp3R".encode()
+
+    
     def create_master_password():
         mstrpwd = input("Create Master Password: ").encode() + pepper
         salt = bcrypt.gensalt()
