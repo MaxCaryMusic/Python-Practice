@@ -31,13 +31,14 @@ def check_db():
         open("passwords.txt", "w")
         print("Password DataBase created successfully!")
 
+init_key() #calling this func here instead of in main() to preempt FileNotFoundError exception
 
 """load key.key and encrypt password data"""
 def load_key():
-        file = open("key.key", "rb")
-        key = file.read()
-        file.close()
-        return key
+    file = open("key.key", "rb")
+    key = file.read()
+    file.close()
+    return key
 
 key = load_key()
 fer = Fernet(key)

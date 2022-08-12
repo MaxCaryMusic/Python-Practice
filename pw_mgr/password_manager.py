@@ -9,7 +9,6 @@ from lib.hash_utils import init_master_password
 
 
 def main():
-    init_key()
   
     print("Welcome to Max's Password Manager!")
     print("\n")
