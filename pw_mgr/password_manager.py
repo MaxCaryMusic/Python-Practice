@@ -1,5 +1,4 @@
 """password manager utilizing fernet encryption for stored passwords and hashing for master password"""
-from lib.crypto_utils import init_key
 from lib.crypto_utils import check_db
 from lib.crypto_utils import view
 from lib.crypto_utils import add

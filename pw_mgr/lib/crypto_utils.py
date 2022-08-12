@@ -1,14 +1,6 @@
 from cryptography.fernet import Fernet
 
 
-def write_key():
-    """
-    if key.key exists, load key.key. otherwise, create key.key.
-    """
-    with open ("key.key", "wb") as key_file:
-        key = Fernet.generate_key()
-        key_file.write(key)
-
 """check if key.key exists. if not, create key.key. if yes, open key.key."""
 def init_key():
     try:    
