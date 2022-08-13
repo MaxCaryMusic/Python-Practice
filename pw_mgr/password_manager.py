@@ -1,19 +1,14 @@
 """password manager utilizing fernet encryption for stored passwords and hashing for master password"""
-from lib.crypto_utils import check_db
-from lib.crypto_utils import view
-from lib.crypto_utils import add
-from lib.hash_utils import create_master_password
-from lib.hash_utils import check_master_password
-from lib.hash_utils import init_master_password
+from lib.crypto_utils import check_db, view, add, init_key
+from lib.hash_utils import create_master_password, check_master_password, init_master_password
 
 
 def main():
   
     print("Welcome to Max's Password Manager!")
     print("\n")
-    
+    fer = init_key()
     init_master_password()
-
     check_db()
 
 
@@ -26,11 +21,11 @@ def main():
             break
         if mode == "view":
             print("\n")
-            view()
+            view(fer)
             input("Press enter to return to main menu...")
         elif mode == "add":
             print("\n")
-            add()
+            add(fer)
         elif mode == "change":
             check_master_password()
             print("\n")
