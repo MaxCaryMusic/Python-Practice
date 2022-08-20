@@ -21,4 +21,5 @@ def function_five(first_var="test", second_var=None):
     return first_var, second_var
 
 def function_six(*first_var, **second_var):
-     print_input(*first_var, second_var)
+    print_input(*first_var, second_var)
+    return *first_var, second_var
