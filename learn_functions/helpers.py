@@ -5,7 +5,7 @@ def print_title(function_name):
 
 def pause_terminal():
     input("Press Enter to continue...")
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def print_input(*args):
     print("input:", *args)
